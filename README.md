@@ -2,6 +2,7 @@ This project acquires data from an accelerometer at 4 kHz and transfers the data
 Hardware platform: 
 1. STM32F103C8
 2. mpu9250 or mpu6500 (SPI interface)
+  
 To compile and debug this project, please have the software listed below installed. 
 1. Keil 5 for ARM
 2. CUBE MX (optional)
