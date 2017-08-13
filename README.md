@@ -1,4 +1,5 @@
 This project acquires data from an accelerometer at 4 kHz and transfers the data to PC through USB cable. 
+  
 Hardware platform: 
 1. STM32F103C8
 2. mpu9250 or mpu6500 (SPI interface)
