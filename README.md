@@ -9,4 +9,5 @@ To compile and debug this project, please have the software listed below install
 2. CUBE MX (optional)
 3. Driver for Jlink2
 4. Driver for STM virtual COM port (windows version only)
+  
 You can easily migrate this project on other 32bit MCUs from ST with USB and SPI interface, or develop this project using other tool chains.
