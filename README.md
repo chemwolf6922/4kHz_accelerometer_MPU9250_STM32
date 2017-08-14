@@ -11,3 +11,5 @@ To compile and debug this project, please have the software listed below install
 4. Driver for STM virtual COM port (windows version only)
   
 You can easily migrate this project on other 32bit MCUs from ST with USB and SPI interface, or develop this project using other tool chains.
+  
+Please edit "#define GYRO" in file "mpu6500.c" to enable or disable gyroscope. Note that gyros and accelerometers can not work at the same time currently.
