@@ -71,7 +71,7 @@
 #define HSI_TIMEOUT_VALUE         ((uint32_t)2)      /* 2 ms (minimum Tick + 1) */
 #define LSI_TIMEOUT_VALUE         ((uint32_t)2)      /* 2 ms (minimum Tick + 1) */
 #define PLL_TIMEOUT_VALUE         ((uint32_t)2)      /* 2 ms (minimum Tick + 1) */
-//#define LSI_VALUE                 ((uint32_t)40000)  /* 40kHz */
+#define LSI_VALUE                 ((uint32_t)40000)  /* 40kHz */
 /**
   * @}
   */

@@ -1,7 +1,7 @@
 mpu9250\main.o: ../Src/main.c
+mpu9250\main.o: ../Inc/main.h
 mpu9250\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 mpu9250\main.o: ../Inc/stm32f1xx_hal_conf.h
-mpu9250\main.o: ../Inc/mxconstants.h
 mpu9250\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
 mpu9250\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 mpu9250\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h

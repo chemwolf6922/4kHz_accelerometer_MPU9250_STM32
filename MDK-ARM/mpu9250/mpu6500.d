@@ -3,7 +3,7 @@ mpu9250\mpu6500.o: ../Inc/mpu6500.h
 mpu9250\mpu6500.o: ../Inc/sys.h
 mpu9250\mpu6500.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 mpu9250\mpu6500.o: ../Inc/stm32f1xx_hal_conf.h
-mpu9250\mpu6500.o: ../Inc/mxconstants.h
+mpu9250\mpu6500.o: ../Inc/main.h
 mpu9250\mpu6500.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
 mpu9250\mpu6500.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 mpu9250\mpu6500.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h

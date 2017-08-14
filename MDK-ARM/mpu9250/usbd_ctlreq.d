@@ -15,7 +15,7 @@ mpu9250\usbd_ctlreq.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 mpu9250\usbd_ctlreq.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 mpu9250\usbd_ctlreq.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 mpu9250\usbd_ctlreq.o: ../Inc/stm32f1xx_hal_conf.h
-mpu9250\usbd_ctlreq.o: ../Inc/mxconstants.h
+mpu9250\usbd_ctlreq.o: ../Inc/main.h
 mpu9250\usbd_ctlreq.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
 mpu9250\usbd_ctlreq.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 mpu9250\usbd_ctlreq.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h

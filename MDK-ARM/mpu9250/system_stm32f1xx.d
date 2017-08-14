@@ -1,4 +1,4 @@
-mpu9250\system_stm32f1xx.o: ../Drivers/CMSIS//Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
+mpu9250\system_stm32f1xx.o: ../Src/system_stm32f1xx.c
 mpu9250\system_stm32f1xx.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 mpu9250\system_stm32f1xx.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 mpu9250\system_stm32f1xx.o: ../Drivers/CMSIS/Include/core_cm3.h
@@ -9,7 +9,7 @@ mpu9250\system_stm32f1xx.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 mpu9250\system_stm32f1xx.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 mpu9250\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 mpu9250\system_stm32f1xx.o: ../Inc/stm32f1xx_hal_conf.h
-mpu9250\system_stm32f1xx.o: ../Inc/mxconstants.h
+mpu9250\system_stm32f1xx.o: ../Inc/main.h
 mpu9250\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
 mpu9250\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 mpu9250\system_stm32f1xx.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h

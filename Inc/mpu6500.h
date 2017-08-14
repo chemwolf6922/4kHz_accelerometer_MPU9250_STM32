@@ -3,6 +3,11 @@
 
 #include "sys.h"
 
+//Enable gyro or accelerometer
+#define GYRO
+//interrupt mode is enabled under max speed to synchronize the data transmission
+//#define MAX_SPEED
+
 #define spi1ncs PAout(4)
 
 typedef struct
