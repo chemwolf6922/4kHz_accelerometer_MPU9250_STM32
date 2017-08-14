@@ -5,6 +5,9 @@ MPU6500/9250 driver
 #include "mpu6500.h"
 #include "usbd_cdc_if.h"
 
+//Enable gyro or accelerometer
+#define GYRO
+
 S16_XYZ MPU6500_Acc;
 extern SPI_HandleTypeDef hspi1;
 u8 spi1txbuffer[15] = {0};
@@ -42,13 +45,17 @@ void mpu6500_init(void){
 	MPU6500_Write_Reg(SIGNAL_PATH_RESET,0X07);	//Reset all the digital signal path
 	HAL_Delay(100);
 	MPU6500_Write_Reg(PWR_MGMT_1,0X01);   		//Auto select the best clock source
-	MPU6500_Write_Reg(PWR_MGMT_2,0X07);   		//Enable all the acceleromters. Disable all the gyros.
-	MPU6500_Write_Reg(CONFIG,0X02);				//Not used	
-	MPU6500_Write_Reg(SMPLRT_DIV,0X00);			//Not used	
-	MPU6500_Write_Reg(GYRO_CONFIG,0X18);  		//Not used
-	MPU6500_Write_Reg(ACCEL_CONFIG,0x10); 		//Set full range to +-8G
-	MPU6500_Write_Reg(ACCEL_CONFIG2,0x08);		//Bypass DLPF to get 4k saple rate
-	MPU6500_Write_Reg(56,0x01);					//Enable dataready interupt
+	#ifdef GYRO
+	MPU6500_Write_Reg(PWR_MGMT_2,0X38);			//Enable gyro Disable acc
+	#else	
+	MPU6500_Write_Reg(PWR_MGMT_2,0X07);			//Enable acc Disable gyro
+	#endif
+	MPU6500_Write_Reg(CONFIG,0X07);				//Only effective using gyro, Set sample rate to 8 kHz
+	MPU6500_Write_Reg(SMPLRT_DIV,0X00);			//Only effective using gyro, Set sample rate to 8 kHz	
+	MPU6500_Write_Reg(GYRO_CONFIG,0X18);  		//Set gyro full range to +-2000 dps
+	MPU6500_Write_Reg(ACCEL_CONFIG,0x10); 		//Set Acc full range to +-8G
+	MPU6500_Write_Reg(ACCEL_CONFIG2,0x08);		//Bypass Acc DLPF to get 4k saple rate
+	MPU6500_Write_Reg(56,0x01);					//Enable data ready interupt
 }
 
 void mpu6500_ReadValue(void){
@@ -66,7 +73,11 @@ void mpu6500_ReadValue(void){
 }
 
 void mpu6500_ReadtoUSB(void){
+	#ifdef GYRO
+	spi1txbuffer[0] = GYRO_XOUT_H|0x80;
+	#else
 	spi1txbuffer[0] = ACCEL_XOUT_H|0x80;
+	#endif
 	for(u8 i = 1;i!=15;i++){
 		spi1txbuffer[i] = 0xFF;
 	}
